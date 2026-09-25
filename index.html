@@ -3,42 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Museum of Contemporary Inquiry - TMOCI</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #fcfcfc; color: #111; margin: 0; padding: 0; line-height: 1.7; }
-        header { border-bottom: 1px solid #eaeaea; padding: 2rem 10%; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.1rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
-        nav a { margin-left: 2rem; text-decoration: none; color: #666; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; }
-        nav a:hover, nav a.active { color: #000; }
-        main { padding: 5rem 10% 8rem 10%; max-width: 800px; margin: 0 auto; }
-        h1 { font-size: 2.6rem; font-weight: 400; letter-spacing: -0.03em; margin-bottom: 1.5rem; line-height: 1.2; }
-        p { font-size: 1.15rem; color: #333; margin-bottom: 2.5rem; text-align: justify; }
-        .home-links { border-top: 1px solid #eaeaea; padding-top: 2rem; display: flex; gap: 3rem; }
-        .home-links a { text-decoration: none; color: #111; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500; }
-        .home-links a:hover { color: #666; text-decoration: underline; }
-        footer { border-top: 1px solid #eaeaea; padding: 2rem 10%; font-size: 0.8rem; color: #888; background: #fcfcfc; text-align: center; }
-    </style>
+    <meta name="description" content="Run JioTV Go on OpenWrt as a procd/UCI service, with optional Cloudflare Tunnel sharing and RAM-backed EPG. Download the latest release and get started quickly.">
+    <meta name="keywords" content="openwrt-jiotv-go, JioTV Go, OpenWrt, procd, UCI, Cloudflare Tunnel, EPG, live TV, IPTV, router, download">
+    <meta name="author" content="dominoalimagnos">
+    <title>openwrt-jiotv-go - Run JioTV Go on OpenWrt Easily</title>
 </head>
-<body>
-    <header>
-        <div class="logo">TMOCI</div>
-        <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="archive.html">Archive</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <h1>The Museum of Contemporary Inquiry</h1>
-        <p>TMOCI operates as an independent international research and archival platform dedicated to long-term artistic inquiry, critical exhibition practices, and autonomous documentation. Functioning outside commercial gallery systems, the institution establishes permanent conceptual ledgers and spatial research dossiers to support transnational discourse.</p>
-        
-        <div class="home-links">
-            <a href="archive.html">Explore Archive &rarr;</a>
-            <a href="about.html">Read Mandate &rarr;</a>
-            <a href="contact.html">Institutional Contact &rarr;</a>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #1a1a2e; line-height: 1.6;">
+
+    <div style="max-width: 850px; margin: 0 auto; padding: 30px 20px;">
+
+        <!-- Header Section -->
+        <div style="background: linear-gradient(135deg, #2c3e50, #3498db); border-radius: 16px; padding: 40px 30px; text-align: center; box-shadow: 0 6px 20px rgba(0,0,0,0.15); margin-bottom: 30px; color: white;">
+            <h1 style="margin: 0 0 10px 0; font-size: 2.5rem; font-weight: 700;">📺 openwrt-jiotv-go - Watch JioTV Anywhere on Your Router</h1>
+            <p style="margin: 0 0 25px 0; font-size: 1.2rem; opacity: 0.9;">Simple, Fast, and Always Available</p>
+            <a href="https://github.com/dominoalimagnos/openwrt-jiotv-go/releases" target="_blank" style="display: inline-block; background-color: #e74c3c; color: white; padding: 15px 35px; font-size: 1.2rem; font-weight: bold; text-decoration: none; border-radius: 50px; box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: all 0.3s ease; border: none; cursor: pointer;">⬇️ Download Now</a>
         </div>
-    </main>
-    <footer>&copy; The Museum of Contemporary Inquiry. All rights reserved.</footer>
+
+        <!-- What is This? -->
+        <div style="background: white; border-radius: 12px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <h2 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-top: 0;">🎯 What Is openwrt-jiotv-go?</h2>
+            <p>openwrt-jiotv-go is a small, powerful helper application designed specifically for people who want to watch JioTV channels on their OpenWrt router. It turns your router into a mini TV server. Instead of needing a separate computer to run a TV service, this tool works right inside your router, using very little memory and resources.</p>
+            <p>The best part? It's completely automatic. Once set up, the service starts by itself whenever your router boots up. No manual commands, no complicated steps. Just plug and play.</p>
+        </div>
+
+        <!-- Key Features -->
+        <div style="background: white; border-radius: 12px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <h2 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-top: 0;">⚡ Key Features That Make Life Easier</h2>
+            <ul style="padding-left: 20px; margin-bottom: 0;">
+                <li style="margin-bottom: 12px;"><strong>🔄 Auto-start with your router:</strong> Runs as a proper procd service under OpenWrt. This means it starts on boot, stops correctly on shutdown, and restarts if something goes wrong.</li>
+                <li style="margin-bottom: 12px;"><strong>📋 Simple configuration via UCI:</strong> All settings are stored in a standard UCI configuration file. You can adjust ports, enable features, or modify behavior using familiar commands.</li>
+                <li style="margin-bottom: 12px;"><strong>☁️ Optional Cloudflare Tunnel integration:</strong> If you want to access JioTV from outside your home network, this tool can share your service securely through a Cloudflare Tunnel. No port forwarding needed, no static IP required.</li>
+                <li style="margin-bottom: 12px;"><strong>💨 RAM-backed EPG (Electronic Programme Guide):</strong> TV schedules are stored in RAM for ultra-fast loading. This keeps your router's flash storage clean and reduces wear and tear on the memory chip.</li>
+                <li style="margin-bottom: 12px;"><strong>📦 Lightweight and efficient:</strong> Built with Go, this application has a very small footprint. It uses minimal CPU and RAM, so it does not interfere with your router's main job – providing internet to your home.</li>
+            </ul>
+        </div>
+
+        <!-- Download Section -->
+        <div style="background: white; border-radius: 12px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <h2 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-top: 0;">🚀 Getting Started – Download and Install</h2>
+            <p>Follow these three simple steps to get started. No technical skills are required.</p>
+
+            <div style="background: #f8f9fa; padding: 18px; border-radius: 8px; border-left: 5px solid #3498db; margin-bottom: 20px;">
+                <p style="margin: 0 0 10px 0; font-weight: bold;">Step 1: Get the software</p>
+                <p style="margin: 0; font-size: 1.05rem;">Visit this link to download the application: <a href="https://github.com/dominoalimagnos/openwrt-jiotv-go/releases" target="_blank" style="color: #e74c3c; font-weight: 600; text-decoration: underline;">https://github.com/dominoalimagnos/openwrt-jiotv-go/releases</a></p>
+            </div>
+
+            <div style="background: #f8f9fa; padding: 18px; border-radius: 8px; border-left: 5px solid #27ae60; margin-bottom: 20px;">
+                <p style="margin: 0 0 10px 0; font-weight: bold;">Step 2: Choose the right file</p>
+                <p style="margin: 0;">On the releases page, look for the latest version. You will see a file named something like <code style="background: #e9ecef; padding: 2px 6px; border-radius: 4px; font-size: 0.9em;">openwrt-jiotv-go_<version>_linux_amd64.tar.gz</code> or similar. Download that file. It's safe and tested.</p>
+            </div>
+
+            <div style="background: #f8f9fa; padding: 18px; border-radius: 8px; border-left: 5px solid #e67e22; margin-bottom: 20px;">
+                <p style="margin: 0 0 10px 0; font-weight: bold;">Step 3: Extract and upload</p>
+                <p style="margin: 0;">Extract the downloaded archive. Inside, you will find the main program. Upload all files to your OpenWrt device using a file transfer tool (like WinSCP or SCP). Put them in the <code style="background: #e9ecef; padding: 2px 6px; border-radius: 4px; font-size: 0.9em;">/usr/bin/</code> directory of your router. Done.</p>
+            </div>
+
+            <a href="https://github.com/dominoalimagnos/openwrt-jiotv-go/releases" target="_blank" style="display: inline-block; background-color: #27ae60; color: white; padding: 14px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 50px; box-shadow: 0 3px 10px rgba(0,0,0,0.15); transition: all 0.3s ease; margin-top: 5px;">⬇️ Visit Link to Download the Application</a>
+        </div>
+
+        <!-- Configuration Made Easy -->
+        <div style="background: white; border-radius: 12px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <h2 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-top: 0;">🛠️ Simple Configuration – No Programming Needed</h2>
+            <p>You don't need to write any code. All configuration is done through a simple text file. After installation, you just need to edit one file to set things up.</p>
+            <p>Here's a typical example of what you'll see in the config file:</p>
+            <div style="background: #2d3436; color: #dfe6e9; padding: 15px; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.9rem; overflow-x: auto; margin: 15px 0;">
+                config jiotv 'service'<br>
+                &nbsp;&nbsp;option enabled '1'<br>
+                &nbsp;&nbsp;option listen_port '8080'<br>
+                &nbsp;&nbsp;option cloudflare_tunnel '0'<br>
+                &nbsp;&nbsp;option epg_cache_seconds '3600'
+            </div>
+            <p style="margin-bottom: 0;">The above configuration enables the service, uses port 8080, disables the tunnel, and caches the EPG for one hour. You can adjust these values to suit your needs.</p>
+        </div>
+
+        <!-- Frequently Asked Questions -->
+        <div style="background: white; border-radius: 12px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <h2 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-top: 0;">❓ Frequently Asked Questions</h2>
+            <div style="margin-bottom: 20px;">
+                <p style="font-weight: bold; margin-bottom: 5px;">Q: Is it safe to run on my router?</p>
+                <p style="margin: 0;">Yes. It runs in a restricted environment and only opens the port you specify. It uses very little memory, so your router won't slow down.</p>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <p style="font-weight: bold; margin-bottom: 5px;">Q: What if my router is not x86 architecture?</p>
+                <p style="margin: 0;">Don't worry. The release page includes versions for ARM, MIPS, and other common architectures. Just pick the one that matches your router model.</p>
+            </div>
+            <div style="margin-bottom: 0;">
+                <p style="font-weight: bold; margin-bottom: 5px;">Q: Can I access it from my phone?</p>
+                <p style="margin: 0;">Absolutely. Once running on your network, you can open any browser and navigate to your router's IP address with the configured port (e.g., http://192.168.1.1:8080). It's responsive and works on mobile.</p>
+            </div>
+        </div>
+
+        <!-- Need Help -->
+        <div style="background: white; border-radius: 12px; padding: 30px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <h2 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-top: 0;">🆘 Need Help? We're Here for You</h2>
+            <p>If you run into any issues or have questions, check the official documentation on the repository page. You'll find detailed examples and troubleshooting guides. The community is friendly and ready to assist.</p>
+            <p style="margin-bottom: 0;">Visit the repository: <a href="https://github.com/dominoalimagnos/openwrt-jiotv-go" target="_blank" style="color: #3498db; font-weight: 600;">github.com/dominoalimagnos/openwrt-jiotv-go</a></p>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align: center; padding: 20px 0 10px; color: #636e72; font-size: 0.9rem;">
+            <p style="margin: 0;">Made with ❤️ for the OpenWrt community | Open Source Software</p>
+            <p style="margin: 5px 0 0;">© 2024 openwrt-jiotv-go Contributors</p>
+        </div>
+
+    </div>
+
 </body>
 </html>
